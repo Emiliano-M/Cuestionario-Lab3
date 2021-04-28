@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+
+<html lang= "es">
+
+
+	<head>
+		<title>  Custionario By Emiliano Montes	</title>
+		<link rel= "stylesheet" href= "style.css"/>	
+	</head>
+
+	<body> 
+
+		<header id= 1> 
+
+			<div id="inicio"> 
+				<h1>EXAMEN DE MANEJO</h1> 
+				<p>Se evaluara su conocimiento sobre las leyes de transito con 10 preguntas</p> 
+			</div>
+
+			<a href= "#registro">CUESTIONARIO</a>
+
+		</header>
+
+		<main id=2>
+
+			<input type="button" name="cerrar" value="cerrar" id="cerrar_resultado" class="oculto">
+
+			<div id="resultado" class="oculto">
+
+				<h1 id="titulo">Sergio Ramos, Usted Aprobo!</h1>
+				<progress value="20" max="100" id="barra"></progress>
+				<h1 id="puntaje">100/100</h1>
+				<img src="media/manejo.gif" alt="Gif de un auto" class="oculto" id="gifok">
+				<img src="media/fail2.gif" alt="Gif de un auto" class="oculto" id="gifbad">
+
+			</div>
+
+			<form name="Cuestionario" method="post" onsubmit="return false">
+
+
+				<!--   REGISTRO DE USUARIO   -->
+				<div id="registro">
+					<label>Registro</label>
+					<input type="text" name="Nombre" id="name" placeholder="Ingrese Su Nombre" required="required">
+					<input type="text" name="Apellido" id="lastname" placeholder="Ingrese Su Apellido" required="required">
+
+						<a href="#p1">Siguiente &#45;&#45;&gt;</a>
+				</div>
+
+				<!--   PREGUNTAS   -->
+				<section id="preguntas">
+
+
+					<!--    PREGUNTA 1   -->
+					<div id="p1">
+
+						<p>En condiciones de viento fuerte, es recomendable realizar los sobrepasos de un camión con una diferencia de velocidad no demasiado elevada.</p><!--Verdadero-->
+
+
+						<label class="v">Verdadero <input type="radio" name="1era" value="Verdadero" id="p1_1" required="required"/></label>
+
+						<label class="f">Falso <input type="radio" name="1era" value="Falso" id="p1_2" required="required"/></label>
+
+
+						
+						<section>
+							<a href="#registro">&lt;&#45;&#45; Anterior</a>
+							<a href="#p2">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+					
+					<!--    PREGUNTA 2   -->
+					<div id="p2">
+
+						<p>En este tramo de la vía no se puede realizar un sobrepaso</p><!--Verdadero-->
+						<img src="media/pregunta2.jpg" alt="tramo de autopista">
+
+						
+						<label class="v">Verdadero <input type="radio" name="2da" value="Verdadero" id="p2_1" required="required"/></label>
+						<label class="f">Falso <input type="radio" name="2da" value="Falso" id="p2_2" required="required"/></label>
+
+
+						
+						<section>
+							<a href="#p1">&lt;&#45;&#45; Anterior</a>
+							<a href="#p3">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+
+					<!--    PREGUNTA 3   -->
+					<div id="p3">
+
+						<p>¿Cuánto dura en su totalidad la condición de principiante?</p>
+						
+						<label class="v">A: Solo 2 años en caso de ser menor de 21. <input type="radio" name="3ra" value="A" id="p3_1" required="required"/></label>
+						<label class="f">B: 6 meses, sólo para quien tramita por primera vez. <input type="radio" name="3ra" value="B" id="p3_2" required="required"/></label><!--Verdadero-->
+						<label class="f">C: 2 años independientemente de la edad. <input type="radio" name="3ra" value="C" id="p3_3" required="required"/></label>
+
+						<section>
+							<a href="#p2">&lt;&#45;&#45; Anterior</a>
+							<a href="#p4">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+
+					<!--    PREGUNTA 4   -->
+					<div id="p4">
+
+						<label id="l4">¿Cual es la velocidad maxíma permitida en zonas urbanas? </label><!--60km/h-->
+						
+						<input type="number" id="4ta" placeholder="Km/h" min="0" required="required"/>
+
+						<section>
+							<a href="#p3">&lt;&#45;&#45; Anterior</a>
+							<a href="#p5">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+				
+					<!--    PREGUNTA 5   -->
+					<div id="p5">
+
+						<label>
+							Todo conductor debe siempre ceder el paso en las encrucijadas al que cruza desde su
+							<select id="5ta">
+								<option selected>--Elegir--</option>
+								<option>izquierda</option>
+								<option>derecha</option><!--Verdadero-->
+							</select> 
+							.
+						</label>
+						
+						<section>
+							<a href="#p4">&lt;&#45;&#45; Anterior</a>
+							<a href="#p6">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+				
+					<!--    PREGUNTA 6   -->
+					<div id="p6">
+						
+						<p>Que no esta permitido a la hora de conducir:</p>
+
+						<label>Consumir Alcohol <input type="checkbox" name="6ta"  id="p6_1" class="checkbox_v"></label><!--Verdadero-->
+						<label>Utilizar auriculares <input type="checkbox" name="6ta" id="p6_2" class="checkbox_v"></label><!--Verdadero-->
+						<label>Usar Casco <input type="checkbox" name="6ta" id="p6_3" class="checkbox_f"></label>
+						<section>
+							<a href="#p5">&lt;&#45;&#45; Anterior</a>
+							<a href="#p7">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+
+					<!--    PREGUNTA 7   -->
+					<div id="p7">
+
+						<p>En autopista ¿Que debemos tener siempre encendido?</p>
+						
+						<label>Las Luces:</label>
+						<label class="v">Altas <input type="radio" name="7ma" value="Verdadero" id="p7_1" required="required"/></label>
+						<label class="f">Bajas <input type="radio" name="7ma" value="Falso"  id="p7_2" required="required"/></label><!--Verdadero-->
+
+						<section>
+							<a href="#p6">&lt;&#45;&#45; Anterior</a>
+							<a href="#p8">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+
+					<!--    PREGUNTA 8   -->
+					<div id="p8">
+
+
+						<label>
+							Para informar correctamente que usted va a
+							<select id="8va">
+								<option selected>--Elegir--</option>
+								<option>doblar</option>
+								<option>estacionar</option><!--Verdadero-->
+							</select> 
+							debe utilizar ambas luces de giro.
+						</label>
+						
+						<section>
+							<a href="#p7">&lt;&#45;&#45; Anterior</a>
+							<a href="#p9">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+
+					<!--    PREGUNTA 9   -->
+					<div id="p9">
+						<p>Según la Ley N° 2148, ¿qué indica un cordón pintado de este color?</p>
+						<img src="media/pregunta9.jpg" alt="vereda de una calle">
+
+						<label class="v">Área reservada de estacionamiento de ciclorodados.<input type="radio" name="9na" value="Verdadero"  id="p9_1" required="required"/></label><!--Verdadero-->
+						<label class="f">Lugar reservado para ascenso y descenso de pasajeros.<input type="radio" name="9na" value="Falso"  id="p9_2" required="required"/></label>
+						<label class="f">Zona exclusiva para carga y descarga de mercaderías.<input type="radio" name="9na" value="Falso"  id="p9_3" required="required"/></label>
+
+						<section>
+							<a href="#p8">&lt;&#45;&#45; Anterior</a>
+							<a href="#p10">Siguiente &#45;&#45;&gt;</a>
+						</section>
+
+					</div>
+
+		
+					<!--    PREGUNTA 10   -->
+					<div id="p10">
+						<p>¿Qué indica el uso de este tipo de luces?</p>
+						<img src="media/pregunta10.jpg" alt="vehiculo en la calle">
+
+						<label>Cuando se utilizan por separado sirven para preanunciar maniobras.<input type="checkbox" name="10ma"  id="p10_1" class="checkbox_v"></label><!--Verdadero-->
+						<label>Que te estan cediendo el paso.<input type="checkbox" name="10ma" class="checkbox_f"  id="p10_2"></label>
+						<label>Cuando se utilizan a la vez sirven para anunciar situaciones de emergencias o que se está por detener.<input type="checkbox" name="10ma" class="checkbox_v"  id="p10_3"></label><!--Verdadero-->
+						
+						<section>
+							<a href="#p9">&lt;&#45;&#45; Anterior</a>
+						</section>
+
+					</div>
+
+				</section>
+
+				<input type="submit" id="enviar" value="Enviar"/>
+
+			</form>
+
+		</main>
+
+	<script src="logic.js"></script>
+
+	</body>
+
+</html>
+
